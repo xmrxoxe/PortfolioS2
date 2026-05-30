@@ -14,6 +14,10 @@ body {
     border: 20px solid #B3AEAE;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 /* Polices */
 
 @font-face {
@@ -297,4 +301,12 @@ h2 {
     font-size: larger;
     right: 5vw;
     top: 30vh;
+}
+
+#contacts {
+    color: #E8E8E9;
+    font-family: King;
+    font-size: 250px;
+    text-align: right;
+    padding-top: 200px;
 }

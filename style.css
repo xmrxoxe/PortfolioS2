@@ -2,10 +2,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* body{ 
+    color:#008000;
+    background-color: blanchedalmond;
+} */
+
 body {
     margin: 0;
     padding: 0;
     background-color: #171616;
+    border: 20px solid #B3AEAE;
 }
 
 /* Polices */
@@ -38,7 +44,7 @@ body {
 /*HEADER*/
 #titrepage {
     font-family: AstonScript;
-    font-size: 100px;
+    font-size: 8vw;
     text-align: center;
     color: #E8E8E9;
 }

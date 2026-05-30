@@ -187,6 +187,7 @@ h2 {
 
 /*PORTFOLIO*/
 #section_portfolio{
+    position: relative;
     height: 100vh;
 }
 .carousel {
@@ -247,6 +248,7 @@ h2 {
     padding-top: 10rem;
     padding-bottom: 10rem;
     padding: 0px;
+    bottom: 0;
 }
 
 @keyframes spin {

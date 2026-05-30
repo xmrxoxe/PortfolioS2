@@ -225,8 +225,8 @@ h2 {
 /*PORTFOLIO*/
 .carousel {
     margin: 100px auto;
-    width: 90%;
-    border: 5px solid red;
+    width: 100%;
+    border: 5px solid ;
     display: flex;
     overflow-x: auto;
 }
@@ -240,12 +240,12 @@ h2 {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    animation: spin 5s infinite linear;
+    animation: spin 10s infinite linear;
     padding-right: 1em;
 }
 
 .card {
-    flex: 0 0 5em;
+    flex: 0 0 10em;
     height: 5em;
     padding: 1em;
     background: cornflowerblue;

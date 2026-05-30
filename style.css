@@ -249,3 +249,21 @@ h2 {
     height: 25em;
     margin-left: 5px;
 }
+
+#txt1 {
+    color: #E8E8E9;
+    width: 650px;
+    text-align: center;
+    font-family: King;
+    font-size: larger;
+    margin-left: 350px;
+}
+
+#txt2 {
+    color: #E8E8E9;
+    width: 650px;
+    text-align: right;
+    font-family: King;
+    font-size: larger;
+    margin-left: 1110px;
+}

@@ -57,6 +57,11 @@ body {
     flex-direction: row;
     justify-content: space-around;
     color: #E8E8E9;
+    margin: 0px;
+}
+
+header {
+    background-image: url("Img/IMG_6115.jpg");
 }
 
 header a {

@@ -264,10 +264,9 @@ h2 {
     position: absolute;
     left: 0;
     bottom: 0;
-    min-width: 50px;
-    min-height: 50px;
-    max-width: 40vw;
-    max-height: 40vh;
+    width: min(20vw, 30vw);
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
     margin: 3vw;
 }
 

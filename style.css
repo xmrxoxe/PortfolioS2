@@ -256,29 +256,39 @@ h2 {
 
 /*A PROPOS*/
 #section_a-propos{
+    position: relative;
     height: 100vh;
 }
 
 #a-propos {
-    width: 25em;
-    height: 25em;
-    margin-left: 5px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 40vw;
+    max-height: 40vh;
+    margin: 3vw;
 }
 
 #txt1 {
+    position: absolute;
     color: #E8E8E9;
-    width: 650px;
+    width: 40vw;
     text-align: center;
     font-family: King;
     font-size: larger;
-    margin-left: 350px;
+    left: 5vw;
+    top: 10vh;
 }
 
 #txt2 {
+    position: absolute;
     color: #E8E8E9;
-    width: 650px;
-    text-align: right;
+    width: 40vw;
+    text-align: center;
     font-family: King;
     font-size: larger;
-    margin-left: 1110px;
+    right: 5vw;
+    top: 30vh;
 }

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Img/LOGO FINAL - B&N.svg" type="image/x-icon">    
+    <title>Marion Bochud</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navpage">
+                <li>Marion</li>
+                <li>Bochud</li>
+                <li>Portfolio MMI</li>
+            </ul>
+        </nav>
+        <div id="titrepage">
+            <h1>Portfolio</h1>
+        </div>
+
+        <div id="bouton-ctr">
+        <button id="bouton_start" type="button" a href="#section_parcours">Start</button>
+        </div>
+
+        <nav class="navbar">
+            <ul class="navpage">
+                <li><a href="#section_projets">Projets</a></li>
+                <li><a href="#section_portfolio">Portfolio</a></li>
+                <li><a href="#section_a-propos">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <!--Section parcours-->
+    <section id="section_parcours">
+    <h2 class="titre_section">//Parcours: :</h2>
+    </section>
+
+<div id="container">
+  <div id="steps">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div id="ball"></div>
+</div>
+
+    <!--Section projets--> <!-- Ya un prblm avec les fleches-->
+    <section id="section_projets">
+    <h2 class="titre_section">//Projets: :</h2>
+
+    <div class="slider">
+        <div class="slide-container fade">
+    <img class="slide-img" src="ImgSubstitution/akshar-dave-lXIpMj1AFUI-unsplash.jpg">
+        </div>
+
+        <div class="slide-container fade">
+    <img class="slide-img" src="ImgSubstitution/akshar-dave-lXIpMj1AFUI-unsplash.jpg">
+        </div>
+
+        <div class="slide-container fade">
+    <img class="slide-img" src="ImgSubstitution/akshar-dave-lXIpMj1AFUI-unsplash.jpg">
+        </div>
+    
+    <a class="prev" onclick="minusSlides(1)">↞</a>
+    <a class="next" onclick="plusSlides(1)">↠</a>
+    </div>
+
+    <br>
+<!-- créer ecouteurs d'evenements JS-->
+    <div class="slide-dot">
+        <span class="dot" onclick="currentSlides(1)"></span>
+        <span class="dot" onclick="currentSlides(2)"></span>
+        <span class="dot" onclick="currentSlides(3)"></span>
+    </div>
+    </section>
+
+    <!--Section portfolio-->
+    <section id="section_portfolio">
+    <h2 class="titre_section">//Portfolio: :</h2>
+
+    <div class="carousel">
+        <div class="group">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+        </div>
+        <div aria-hidden class="group">
+            <div class="card">1</div>
+            <div class="card">2</div>
+            <div class="card">3</div>
+            <div class="card">4</div>
+            <div class="card">5</div>
+            <div class="card">6</div>
+        </div>
+    </div>
+    </section>
+    <!--Section A propos-->
+    <section id="section_a-propos">
+    <h2 class="titre_section">//A propos: :</h2>
+
+    <img id="a-propos" src="ImgSubstitution/akshar-dave-lXIpMj1AFUI-unsplash.jpg">
+    </section>
+
+    <footer>
+
+    </footer>
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

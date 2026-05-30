@@ -1,0 +1,260 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #171616;
+}
+
+/* Polices */
+
+@font-face {
+    font-family: AstonScript;
+    src: url(Polices/aston_script/Aston\ Script.ttf);
+}
+
+@font-face {
+    font-family: Dead postman;
+    src: url(Polices/dead_postman_respawned/DeadpostmanRespawned.ttf);
+}
+
+@font-face {
+    font-family: King;
+    src: url(Polices/king/KIN668.TTF);
+}
+
+@font-face {
+    font-family: Minecraft;
+    src: url(Polices/minecraft/Minecraft.ttf);
+}
+
+@font-face {
+    font-family: digital;
+    src: url(Polices/digital_7/digital-7\ \(italic\).ttf);
+}
+
+/*HEADER*/
+#titrepage {
+    font-family: AstonScript;
+    font-size: 100px;
+    text-align: center;
+    color: #E8E8E9;
+}
+
+.navpage {
+    font-family: King;
+    font-size: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #E8E8E9;
+}
+
+header a {
+    color: #E8E8E9;
+}
+
+#bouton-ctr{
+    text-align: center;
+}
+
+#bouton_start {
+    font-family: Minecraft;
+    font-size: 18px;
+    background-color: #352a2a;
+    color: black;
+    text-shadow: 0 2px 0 black / 25%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 0;
+    z-index: 1;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: unset;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+#bouton_start:before {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+    z-index: -1;
+    background-color: #d9d9d9 !important;
+    box-shadow: 0 -4px #343a40 inset,
+        0 4px #6c757d inset, -4px 0 #403d39 inset,
+        4px 0 #495057 inset;
+}
+
+#bouton_start:after {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+    transition: 0.7s cubic-bezier(0, 0.8, 0.26, 0.99);
+}
+
+#bouton_start:hover:before {
+    box-shadow: 0 -4px rgb(0 0 0 / 50%) inset, 0 4px rgb(255 255 255 / 20%) inset,
+        -4px 0 rgb(255 255 255 / 20%) inset, 4px 0 rgb(0 0 0 / 50%) inset;
+}
+
+#bouton_start:hover:after {
+    box-shadow: 0 4px 0 0 rgb(0 0 0 / 15%);
+}
+
+#bouton_start:active {
+    transform: translateY(4px);
+}
+
+#bouton_start:active:after {
+    box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
+}
+
+h2 {
+    font-family: digital;
+    font-size: 50px;
+    color: #2B5832;
+}
+
+/*PARCOURS*/
+
+
+/*PROJETS*/
+.slide-container {
+    display: none;
+}
+
+.slider {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    font-size: 30px;
+    background-color: #343a40;
+    transition: background-color 0.6s ease;
+}
+
+.prev {
+    right: 15px;
+}
+
+.next {
+    left: 15px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #343a40;
+}
+
+.slide-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide-dot {
+    text-align: center;
+}
+
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot-hover {
+    background-color: #403d39;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+
+/*PORTFOLIO*/
+.carousel {
+    margin: 100px auto;
+    width: 90%;
+    border: 5px solid red;
+    display: flex;
+    overflow-x: auto;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    animation: spin 5s infinite linear;
+    padding-right: 1em;
+}
+
+.card {
+    flex: 0 0 5em;
+    height: 5em;
+    padding: 1em;
+    background: cornflowerblue;
+    font-size: 3em;
+    border-radius: .2em;
+    text-align: center;
+    align-content: center;
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
+/*A PROPOS*/
+#a-propos {
+    width: 50px;
+}

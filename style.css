@@ -273,8 +273,8 @@ h2 {
 
 #a-propos {
     position: absolute;
-    left: 0;
-    bottom: 0;
+    left: 0px;
+    bottom: 0px;
     width: min(20vw, 30vw);
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -304,9 +304,12 @@ h2 {
 }
 
 #contacts {
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
     color: #E8E8E9;
     font-family: King;
-    font-size: 250px;
+    font-size: min(14vw, 30vw);
     text-align: right;
-    padding-top: 200px;
+    margin-bottom: min(80px, 30vw);
 }

@@ -160,7 +160,7 @@ h2 {
     overflow: hidden;
     border-right: .15em solid #2B5832;
     white-space: nowrap;
-    animation: typing 3.5s steps(25, end), blink-caret .75s step-end infinite;
+    animation: typing 3.5s steps(25, end), blink-caret 2s ease;
 }
 
 @keyframes typing {

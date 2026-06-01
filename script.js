@@ -35,3 +35,12 @@ function showSlides(n){
     slides[slideIndex-1].style.display = "block";
     dots[slideIndex-1].className +=" active";
 }
+
+"use strict";
+var titre = document.getElementsByClassName("titre_section");
+titre.addEventListener("click", function(e){
+  e.preventDefault;
+  titre.classList.remove("run-animation");
+    void titre.offsetWidth;
+    titre.classList.add("run-animation");
+});

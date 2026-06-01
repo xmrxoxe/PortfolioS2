@@ -70,7 +70,7 @@ body {
 }
 
 header {
-    background-image: url("Img/IMG_6115.jpg");
+    background-image: url("Img/IMG_6115 cropped.jpg");
     background-size: cover;
     height: 100vh;
 }
@@ -157,6 +157,20 @@ h2 {
     font-family: digital;
     font-size: 50px;
     color: #2B5832;
+    overflow: hidden;
+    border-right: .15em solid #2B5832;
+    white-space: nowrap;
+    animation: typing 3.5s steps(25, end), blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 20% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #2B5832; }
 }
 
 /*PARCOURS*/
@@ -199,6 +213,7 @@ h2 {
     position: relative;
     height: 100vh;
 }
+
 .carousel {
     margin: 100px auto;
     width: 100%;

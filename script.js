@@ -44,3 +44,17 @@ titre.addEventListener("click", function(e){
     void titre.offsetWidth;
     titre.classList.add("run-animation");
 });
+
+let deroule = document.getElementsByClassName("deroule");
+let desc_parcours = document.getElementById("description-parcours");
+let desc_projets = document.getElementById("description-projets");
+let desc_portfolio = document.getElementById("description-portfolio");
+let desc_contact = document.getElementById("description-a-propos");
+let show_desc = document.getElementsByClassName("show-desc");
+
+deroule.onclick = function(){
+    desc_parcours.classList.toggle('open');
+    desc_projets.classList.toggle('open');
+    desc_portfolio.classList.toggle('open');
+    desc_contact.classList.toggle('open');
+}

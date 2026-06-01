@@ -26,11 +26,6 @@ body {
 }
 
 @font-face {
-    font-family: Dead postman;
-    src: url(Polices/dead_postman_respawned/DeadpostmanRespawned.ttf);
-}
-
-@font-face {
     font-family: King;
     src: url(Polices/king/KIN668.TTF);
 }
@@ -171,6 +166,34 @@ h2 {
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: #2B5832; }
+}
+
+.deroule {
+    font-family: Digital;
+    font-size: 30px;
+    color: #2B5832;
+    cursor: pointer;
+}
+
+.description ul {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    list-style: none;
+    color: #2B5832;
+    width: 40vw;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s;
+    font-family: Digital;
+}
+
+.description ul li {
+    padding: 10px 20px;
+}
+
+.description ul.open {
+    max-height: 200px;
 }
 
 /*PARCOURS*/

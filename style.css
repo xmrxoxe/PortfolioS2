@@ -155,6 +155,9 @@ h2 {
     overflow: hidden;
     border-right: .15em solid #2B5832;
     white-space: nowrap;
+}
+
+.run-animation {
     animation: typing 3.5s steps(25, end), blink-caret 2s ease;
 }
 
@@ -193,7 +196,15 @@ h2 {
 }
 
 .description ul.open {
-    max-height: 200px;
+    max-height: 500px;
+}
+
+.description {
+    position: relative;
+}
+
+.description ul {
+    transform: translateX(-50%);
 }
 
 /*PARCOURS*/

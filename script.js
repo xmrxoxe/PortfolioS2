@@ -1,60 +1,25 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+document.addEventListener('DOMContentLoaded', function(){
+  "use strict";
+  var titres = document.querySelectorAll(".titre_section");
+  titres.forEach(function(t){ t.classList.add('run-animation'); });
+  titres.forEach(function(titre){
+    titre.addEventListener("click", function(e){
+      if (e && e.preventDefault) e.preventDefault();
+      titre.classList.remove("run-animation");
+      void titre.offsetWidth;
+      titre.classList.add("run-animation");
+      console.log("Animation relancée.");
+    });
+  });
 
-function getIndex(){
-    console.log(slideIndex);
-}
+  let deroules = document.querySelectorAll(".deroule");
 
-function plusSlides(n){
-    slideIndex += n;
-    showSlides(slideIndex);
-}
-
-function minusSlides(n){
-    slideIndex -= n;
-    showSlides(slideIndex);
-}
-
-function currentSlides(n){
-    slideIndex = n;
-    showSlides(slideIndex);
-}
-
-function showSlides(n){
-    var i;
-    var slides = document.getElementsByClassName("slide-container");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex=1}
-    if (n < 1) {slideIndex = dots.length} // Nombre de points
-    for (i = 0; i < slides.length; i++){
-        slides[i].style.display = "none"
-    }
-    for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className +=" active";
-}
-
-"use strict";
-var titre = document.getElementsByClassName("titre_section");
-titre.addEventListener("click", function(e){
-  e.preventDefault;
-  titre.classList.remove("run-animation");
-    void titre.offsetWidth;
-    titre.classList.add("run-animation");
+  deroules.forEach(function(el){
+    el.addEventListener('click', function(){
+      var container = el.closest('.description');
+      if (!container) return;
+      var list = container.querySelector('ul');
+      if (list) list.classList.toggle('open');
+    });
+  });
 });
-
-let deroule = document.getElementsByClassName("deroule");
-let desc_parcours = document.getElementById("description-parcours");
-let desc_projets = document.getElementById("description-projets");
-let desc_portfolio = document.getElementById("description-portfolio");
-let desc_contact = document.getElementById("description-a-propos");
-let show_desc = document.getElementsByClassName("show-desc");
-
-deroule.onclick = function(){
-    desc_parcours.classList.toggle('open');
-    desc_projets.classList.toggle('open');
-    desc_portfolio.classList.toggle('open');
-    desc_contact.classList.toggle('open');
-}

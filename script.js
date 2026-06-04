@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function(){
 
   deroules.forEach(function(el){
     el.addEventListener('click', function(){
-      var container = el.closest('.description');
-      if (!container) return;
-      var list = container.querySelector('ul');
+      var section = el.closest('section');
+      if (!section) return;
+      var list = section.querySelector('.description ul');
       if (list) list.classList.toggle('open');
     });
   });

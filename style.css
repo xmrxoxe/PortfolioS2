@@ -155,33 +155,41 @@ h2 {
     overflow: hidden;
     border-right: .15em solid #2B5832;
     white-space: nowrap;
+    display: inline-block;
+}
+
+.section-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .run-animation {
-    animation: typing 3.5s steps(25, end), blink-caret 2s ease;
+    animation: typing 3.5s steps(25, end), blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
-  from { width: 0 }
-  to { width: 20% }
+    from { width: 0 }
+    to { width: 100% }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #2B5832; }
+    50% { border-color: transparent; }
+    51% { border-color: #2B5832; }
 }
 
 .deroule {
     font-family: Digital;
-    font-size: 30px;
+    font-size: 50px;
     color: #2B5832;
     cursor: pointer;
 }
 
 .description ul {
     position: absolute;
-    top: 15%;
-    left: 50%;
+    font-size: 20px;
+    bottom: 0;
+    left: 40%;
     list-style: none;
     color: #2B5832;
     width: 40vw;

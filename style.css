@@ -222,6 +222,8 @@ h2 {
 
 h3 {
     margin: 0px;
+    font-family: digital;
+    font-size: 40px;
 }
 
 .row {
@@ -250,6 +252,14 @@ h3 {
     text-align: center;
 }
 
+.blocs p {
+    font-family: King;
+    width: 70px;
+    margin-left: 50px;
+    font-size: 25px;
+    text-align: center;
+}
+
 /*PROJETS*/
 #section_projets{
     height: 100vh;
@@ -272,6 +282,19 @@ h3 {
     background-color: white;
     transition: transform 0.9s ease-in-out;
     transform-origin: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#projet1 {
+    background-image: url("Projets/logo_sae_2-removebg-preview (4).png");
+    background-color: transparent;
+}
+
+#projet2 {
+    background-image: url("Projets/image-removebg-preview.png");
+    background-color: transparent;
 }
 
 .container div:hover{

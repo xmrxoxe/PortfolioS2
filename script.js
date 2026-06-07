@@ -13,13 +13,33 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 
   var blocs = document.querySelectorAll(".container div");
+
   blocs.forEach(function(bloc){
     bloc.addEventListener("click", function(e){
       if (e && e.preventDefault) e.preventDefault();
       blocs.forEach(function(otherBloc){
+        var otherDivC = otherBloc.querySelector('.zoom div');
+        if (otherDivC != null){
+          otherDivC.classList.remove("affiché");
+        }
         otherBloc.classList.remove("zoom");
       });
       bloc.classList.add("zoom");
+      var divC = bloc.querySelector('.zoom div');
+      if (divC) {
+        var img = divC.querySelector('img');
+        if (img) {
+          var rect = bloc.getBoundingClientRect();
+          if (rect.left < window.innerWidth / 2) {
+            img.style.left = '20vw';
+            img.style.right = 'auto';
+          } else {
+            img.style.right = '20vw';
+            img.style.left = 'auto';
+          }
+        }
+        divC.classList.add("affiché");
+      }
       console.log("Animation relancée.");
     });
   });
@@ -27,12 +47,20 @@ document.addEventListener('DOMContentLoaded', function(){
   document.addEventListener("click", function(e){
     if (!e.target.closest(".container div")) {
       blocs.forEach(function(bloc){
+        var divC = bloc.querySelector('.zoom div');
+        if (divC != null){
+          divC.classList.remove("affiché");
+          var img = divC.querySelector('img');
+          if (img) {
+            img.style.left = '';
+            img.style.right = '';
+          }
+        }
         bloc.classList.remove("zoom");
-      });
+      })
     }
   });
-
-  let deroules = document.querySelectorAll(".deroule");
+    let deroules = document.querySelectorAll(".deroule");
 
   deroules.forEach(function(el){
     el.addEventListener('click', function(){

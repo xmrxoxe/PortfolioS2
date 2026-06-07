@@ -276,6 +276,7 @@ h3 {
 }
 
 .container div{
+    position: relative;
     width: 15vw;
     height: 50vh;
     border-radius: 10px;
@@ -297,13 +298,60 @@ h3 {
     background-color: transparent;
 }
 
+.show  div{
+    background-color: red;
+}
+
+.container div{
+    position: relative;
+}
+
 .container div:hover{
     background-color: green;
     cursor: crosshair;
 }
 
+.container div > div {
+    position: absolute;
+    inset: 0;
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: #E8E8E9;
+    text-align: center;
+}
+
 .zoom {
   transform: scale(1.5);
+  z-index: 10;
+}
+
+.zoom > div {
+    visibility: visible;
+}
+
+.affiché {
+    position: relative;
+    z-index: 9999;
+    visibility: visible;
+}
+
+.affiché img{
+    position: absolute;
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 100%;
+    right: auto;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.75);
+    max-width: 25vw;
+    max-height: 80vh;
+    object-fit: contain;
 }
 
 

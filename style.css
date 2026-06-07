@@ -220,6 +220,36 @@ h2 {
     height: 100vh;
 }
 
+h3 {
+    margin: 0px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  align-content: stretch;
+  gap: 8px;
+}
+
+
+.barre {
+    height: 3vh;
+    width: 10vw;
+    background-color: #bbb;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 0px;
+}
+
+.blocs{
+    margin: 0px;
+    color: white;
+    text-align: center;
+}
+
 /*PROJETS*/
 #section_projets{
     height: 100vh;
@@ -240,13 +270,17 @@ h2 {
     height: 50vh;
     border-radius: 10px;
     background-color: white;
+    transition: transform 0.9s ease-in-out;
+    transform-origin: center center;
 }
 
 .container div:hover{
-    width: 15vw;
-    height: 40vh;
     background-color: green;
     cursor: crosshair;
+}
+
+.zoom {
+  transform: scale(1.5);
 }
 
 

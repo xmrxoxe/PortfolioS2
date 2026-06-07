@@ -12,6 +12,26 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
+  var blocs = document.querySelectorAll(".container div");
+  blocs.forEach(function(bloc){
+    bloc.addEventListener("click", function(e){
+      if (e && e.preventDefault) e.preventDefault();
+      blocs.forEach(function(otherBloc){
+        otherBloc.classList.remove("zoom");
+      });
+      bloc.classList.add("zoom");
+      console.log("Animation relancée.");
+    });
+  });
+
+  document.addEventListener("click", function(e){
+    if (!e.target.closest(".container div")) {
+      blocs.forEach(function(bloc){
+        bloc.classList.remove("zoom");
+      });
+    }
+  });
+
   let deroules = document.querySelectorAll(".deroule");
 
   deroules.forEach(function(el){

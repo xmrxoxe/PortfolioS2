@@ -349,7 +349,7 @@ h3 {
     right: auto;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.75);
-    max-width: 25vw;
+    max-width: 30vw;
     max-height: 80vh;
     object-fit: contain;
 }

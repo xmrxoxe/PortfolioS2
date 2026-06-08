@@ -385,11 +385,20 @@ h3 {
     flex: 0 0 10em;
     height: 5em;
     padding: 1em;
-    background: cornflowerblue;
+    background: transparent;
     font-size: 3em;
     border-radius: .2em;
     text-align: center;
     align-content: center;
+}
+
+#section_portfolio .carousel img {
+    max-width: 12vw;
+    max-height: 40vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
 }
 
 @keyframes spin {
